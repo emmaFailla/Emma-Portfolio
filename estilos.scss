@@ -1,0 +1,805 @@
+@font-face {
+    font-family:"undertale" ;
+    src: url(fonts/PixelOperatorMono8-Bold.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family:'undertale', sans-serif;
+}
+
+body{
+    background-color: #000;
+    position: relative;
+
+    .firstScreen__container{
+      height: 100vh;
+      width: 100vw;
+      background-color:#000;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 4fr 6fr;
+      position: relative;
+
+      .firstScreen__container-copyright{
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        font-size: .5rem;
+      }
+
+      .gameTitle__container{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content:center;
+        align-items:center;
+
+        h1{
+          font-size: 1.7rem;
+          text-align: center;
+        }
+      }
+
+      .gameOptions__section{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content:center;
+
+        .gameOptions__container{
+          height: 20vh;
+          width: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          flex-flow:column;
+
+          .gameOptions{
+            text-align: center;
+            list-style: none;
+            font-size:1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .gameArrow{
+              position: absolute;
+              left: -1.3rem;
+            }
+            
+          }
+        }
+      }
+    }
+    .firstScreen__containerOff{
+      display: none;
+    }
+
+    .chooseYourCharacter__container{
+      height: 100vh;
+      width: 100vw;
+      background-color:#000;
+      display:grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 8fr;
+      justify-items: center;
+
+      .chooseYourCharacter__header__container{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        border-bottom: solid #fff 4px;
+
+        span{
+          width: 70%;
+          text-align: center;
+          line-height:2rem;
+          font-size: 1.2rem;
+        }
+      }
+
+
+      .characterSelection__container{
+        height: 100%;
+        width: 80%;
+        background-color: #000;
+        display: grid;
+        grid-template-rows:1fr 1fr 1fr;
+        grid-template-columns:1fr 1fr ;
+        gap: 1rem;
+
+        .characterSelection__character-container{
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items:center;
+          justify-content:center;
+          cursor: pointer;
+
+
+          .characterSelection__character{
+            height: 80%;
+            width: 100%;
+            border: solid #fff 4px;
+
+            img{
+              height: 100%;
+              width: 100%;
+              object-fit:cover;
+            }
+          }
+          
+        }
+        
+      }
+    }
+    .chooseYourCharacter__containerOff{
+      display: none;
+    }
+    
+
+    #header{
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        
+        .header__container{
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+            height: 100%;
+            border-bottom: solid 4px #fff;
+
+        }
+
+        .characterInfo__container{
+                display: flex;
+                align-items:center;
+            h1{
+                font-size: 1rem;
+            }
+
+
+        }
+
+        .closingCharacter__container{
+          display: flex;
+          
+            i{
+                font-size: 1.3rem;
+                cursor: pointer;
+
+                &:hover{
+                  color: #b10000;
+                }
+            }
+        }
+    }
+
+    #main{
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+      .main__container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex-flow: column;
+
+          .character__container{
+            height: 40vh;
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow:column;
+            border-bottom: solid #fff 4px;
+
+            .pic__container{
+              height: 25vh;
+              width: 50vw;
+              border: solid #fff 6px;
+
+              .characterSpray{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+
+            .name{
+              padding-top: 1rem;
+              font-size:1rem;
+            }
+            
+          }
+
+          .stats__container{
+            width: 90%;
+            border-bottom: #fff solid 4px;
+            display: flex;
+            flex-flow: column;
+            height: 50vh;
+            justify-content: center;
+
+            .levels__container{
+              height: 10vh;
+              display: flex;
+              flex-flow:column;
+              justify-content: space-evenly;
+              
+              .lvl__container{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                .lvl{
+                  font-size: .8rem;
+                }
+
+                .upgradePoints{
+                  font-size:.6rem ;
+                }
+              }
+
+              .lvlBar{
+                height: 90%;
+                height: 2vh;
+                border:solid #ffffff 2px;
+                position: relative;
+
+                .experienceAmount{
+                  position: absolute;
+                  top: -.9rem;
+                  right: 0;
+                  font-size:.5rem;
+                }
+
+                .lvlBar__bar{
+                  height: 100%;
+                  width: 83%;
+                  background-color: #ffffff;
+                }
+              }
+            }
+
+            .html__container,.css__container,.javascript__container,.gitHub__container,.endurance__container{
+              height: 8vh;
+              display: flex;
+              align-items: center;
+              justify-content:space-evenly;
+
+              .upgradeButton{
+                height: 20px;
+                width: 25px;
+                border: solid #fff 1px;
+                display: flex;
+                align-items: center;
+                justify-content:center;
+                z-index: 2;
+
+                i{
+                  font-size:.6rem;
+                  z-index: 1;
+                }
+              }
+
+              .htmlTitle{
+                font-size:.8rem;
+                display: flex;
+                align-items: center;
+                justify-content:flex-start;
+                width: 50vw;
+
+                .htmlLogo__container{
+                  height: 25px;
+                  width: 25px;
+
+                  img{
+                    height: 100%;
+                    width: 100%;
+                  }
+                }
+                span{
+                  margin-left: 5px;
+                }
+              }
+              .htmlStats__container{
+                height: 2vh;
+                display: grid;
+                grid-template-rows:1fr;
+                grid-template-columns: repeat(16,2vw);
+                gap: 3px;
+                margin-left: .5rem;
+                
+                .htmlRed{
+                  background-color: rgb(255, 61, 61);
+                }
+                .htmlYellow{
+                  background-color: rgb(255, 255, 84);
+                }
+                .htmlLightGreen{
+                  background-color: rgb(108, 251, 108);
+                }
+                .htmlGreen{
+                  background-color: rgb(0, 255, 0);
+                }
+              }
+
+              .cssTitle{
+                font-size:.8rem;
+                display: flex;
+                align-items: center;
+                justify-content:flex-start;
+                width: 50vw;
+                span{
+                  margin-left: 5px;
+                }
+
+                .cssLogo__container{
+                  height: 25px;
+                  width: 25px;
+                  
+                  img{
+                    height: 100%;
+                    width: 100%;
+                  }
+              }
+            }
+            .cssStats__container{
+              height: 2vh;
+              display: grid;
+              grid-template-rows:1fr;
+              grid-template-columns: repeat(16,2vw);
+              gap: 3px;
+              margin-left: .5rem;
+              
+              .cssRed{
+                background-color: rgb(255, 61, 61);
+              }
+              .cssYellow{
+                background-color: rgb(255, 255, 84);
+              }
+              .cssLightGreen{
+                background-color: rgb(108, 251, 108);
+              }
+              .cssGreen{
+                background-color: rgb(0, 255, 0);
+              }
+            }
+
+
+              .javascriptTitle{
+                font-size:.8rem;
+                display: flex;
+                align-items: center;
+                justify-content:flex-start;
+                width: 50vw;
+                span{
+                  margin-left: 5px;
+                }
+                .jsLogo__container{
+                  height: 25px;
+                  width: 25px;
+                  
+                  img{
+                    height: 100%;
+                    width: 100%;
+                  }
+
+                 
+                }
+              }
+              .jsStats__container{
+                height: 2vh;
+                display: grid;
+                grid-template-rows:1fr;
+                grid-template-columns: repeat(16,2vw);
+                gap: 3px;
+                margin-left: .5rem;
+                
+                .jsRed{
+                  background-color: rgb(255, 61, 61);
+                }
+                .jsYellow{
+                  background-color: rgb(255, 255, 84);
+                }
+                .jsLightGreen{
+                  background-color: rgb(108, 251, 108);
+                }
+                .jsGreen{
+                  background-color: rgb(0, 255, 0);
+                }
+              }
+
+              .gitHubTitle{
+                font-size:.8rem;
+                display: flex;
+                align-items: center;
+                justify-content:flex-start;
+                width: 50vw;
+                span{
+                  margin-left: 5px;
+                }
+
+                .gitLogo__container{
+                  height: 25px;
+                  width: 25px;
+                  
+                  img{
+                    height: 100%;
+                    width: 100%;
+                  }
+              }  
+            }
+            .gitStats__container{
+              height: 2vh;
+              display: grid;
+              grid-template-rows:1fr;
+              grid-template-columns: repeat(16,2vw);
+              gap: 3px;
+              margin-left: .5rem;
+              
+              .gitRed{
+                background-color: rgb(255, 61, 61);
+              }
+              .gitYellow{
+                background-color: rgb(255, 255, 84);
+              }
+              .gitLightGreen{
+                background-color: rgb(108, 251, 108);
+              }
+              .gitGreen{
+                background-color: rgb(0, 255, 0);
+              }
+
+              .enduranceTitle{
+                font-size:.8rem;
+                display: flex;
+                align-items: center;
+                justify-content:center;
+                span{
+                  margin-left: 5px;
+                }
+              }
+
+              .enduranceNumbers{
+                font-size:.6rem;
+              }
+            }
+            
+          }
+
+          }
+
+          .atributosSection__container{
+            display: flex;
+            flex-flow:column;
+            align-items:center;
+            justify-content: space-evenly;
+            height: 45vh;
+            width: 90%;
+            border-bottom: solid #fff 4px;
+            position:relative;
+
+            .powerInfo{
+              height: 80%;
+              width: 95%;
+              position: absolute;
+              background-color: #000;
+              background-repeat:no-repeat;
+              background-position: center center;
+              z-index: 2;
+              border: #fff solid 3px;
+              display: flex;
+              align-items: center;
+              justify-content:space-evenly;
+              flex-flow:column;
+              
+              h4{
+                width: 80%;
+                text-align: center;
+                border-bottom:solid #fff 2px;
+                padding-bottom: 1rem;
+              }
+              span{
+                font-size:.8rem;
+                line-height: 1.2rem;
+                text-align: center;
+                width: 90%;
+
+                b{
+                  color: yellow;
+                }
+              }
+
+              .closePowerinfo__button{
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+              }
+              
+            }
+
+            .powerInfoOff{
+              display: none;
+            }
+
+            h2{
+              font-size:1rem;
+            }
+
+            .atributosSlider__container{
+              height: 20vh;
+              border: solid #fff 4px;
+              width: 50vw;
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              z-index: 1;
+
+
+              .sliderImage{
+                height: 90%;
+                width: 90%;
+                object-fit:contain;
+              }
+
+              .leftButton{
+                position: absolute;
+                left: -2rem;
+                font-size: 1.5rem;
+                z-index: 2;
+              }
+              .rightButton{
+                position: absolute;
+                right: -2rem;
+                font-size: 1.5rem;
+                z-index: 2;
+
+
+              }
+
+            }
+
+            .atributteName__container{
+              height: 4vh;
+              width: 50vw;
+              display: flex;
+              align-items:center;
+              justify-content:center;
+
+              .atributteName{
+                font-size:.8rem;
+                position: relative;
+                bottom: 1rem;
+                white-space: nowrap;
+              }
+              
+            }
+          }
+
+          .characterInfo__container{
+              height: 50vh;
+              width: 90%;
+              display: flex;
+              flex-flow: column;
+              align-items: center;
+              justify-content: space-evenly;
+              border-bottom: solid #fff 4px;
+
+              .characterInfo__title{
+                font-size: 1rem;
+              }
+
+              .info__container{
+                width: 95%;
+                height: 30vh;
+                font-size: .6rem;
+                text-align: center;
+                line-height: 1.4rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                // .info__container-info{
+                //   display: flex;
+                //   flex-direction: row-reverse;
+                // }
+
+               
+                
+              } 
+
+              
+          }
+
+          .portfolio__container{
+            height: 60vh;
+            width: 90%;
+            border-bottom:solid #fff 4px;
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1rem;
+            align-items: center;
+            justify-items: center;
+            position: relative;
+
+            
+
+            .webPage__container{
+              height: 100%;
+              width: 100%;
+              flex-flow:column;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .webPage{
+                height: 70%;
+                width: 90%;
+                display: flex;
+                position: relative;
+                flex-flow:column;
+                justify-content: space-evenly;
+                align-items: center;
+                border: solid #fff 4px;
+
+                .pageLink__container{
+                  display: flex;
+                  bottom: .5rem;
+                  left: .5rem;
+                  background-color: #000;
+                  border: solid #fff 3px;
+                  height: 20%;
+                  width: 60%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+
+                  i{
+                    font-size: .6rem;
+                    margin-right: 5px;
+                  }
+                  a{
+                    font-size:.6rem;
+                    text-decoration: none;
+                  }
+                }
+
+                .pageLink__containerOff{
+                  display:none;
+                }
+
+                
+                .gitLink__container{
+                  display: flex;
+                  justify-content: center;
+                  align-items:center;
+                  bottom: .5rem;
+                  right: .5rem;
+                  background-color: #000;
+                  border:#fff solid 3px;
+                  height: 20%;
+                  width: 60%;
+
+                  i{
+                    font-size: .6rem;
+                    margin-right: 5px;
+                  }
+                  a{
+                    font-size:.6rem;
+                    text-decoration:none;
+                  }
+                }
+
+                .gitLink__containerOff{
+                  display: none;
+                }
+
+              }
+              //Fondo cyberpunk
+              .webPage-cyberpunk{
+                background-image:url(imgs/cyberpunk8bit.png);
+                background-position: center center;
+                background-size: cover;
+              }
+              //Fondo bocchi
+              .webPage-bocchi{
+                background-image:url(imgs/bocchi8bit.png);
+                background-position: center center;
+                background-size: cover;
+              }
+              //Fondo maidCafe
+              .webPage-maidCafe{
+                background-image:url(imgs/maidCafePixelLogo.png);
+                background-position: center center;
+                background-size: cover; 
+              }
+              .webPage-evangelion{
+                background-image:url(imgs/Evangelion8bit.jpg);
+                background-position: center center;
+                background-size: cover; 
+              }
+
+              .webPageOff{
+                display: none;
+              }
+
+
+              h5{
+                margin-top:10px;
+                text-align: center;
+                font-size: .7rem;
+                white-space: nowrap;
+              }
+            }
+          }
+
+          
+    } 
+    }
+    #footer{
+     display: flex;
+     align-items: center;
+     justify-content:center;
+     .footer__container{
+      height: 10vh;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content:center;
+
+      span{
+        font-size:.5rem;
+      }
+     }
+    }
+
+    
+    
+    
+    
+    
+
+//KeyFrame:
+@keyframes cameleon {
+  0%{
+    color: #fff;
+  }
+
+  25%{
+    color: gold;
+  }
+
+  50%{
+    color: #fff;
+  }
+
+  75%{
+    color: gold;
+  }
+
+  100%{
+    color: #fff;
+  }
+}
+
+
+
+  }
