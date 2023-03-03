@@ -102,6 +102,7 @@ body .firstScreen__container .gameOptions__section .gameOptions__container .game
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  cursor: pointer;
 }
 
 body .firstScreen__container .gameOptions__section .gameOptions__container .gameOptions .gameArrow {
@@ -193,7 +194,121 @@ body .chooseYourCharacter__containerOff {
   display: none;
 }
 
-body #header {
+body .creditosScreen__container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+body .creditosScreen__container h1 {
+  position: absolute;
+  opacity: .3;
+  font-size: 2rem;
+  top: calc(50vh - 2rem);
+  z-index: 1;
+}
+
+body .creditosScreen__container span {
+  font-size: .8rem;
+  color: yellow;
+  position: absolute;
+  -webkit-animation-name: credits;
+          animation-name: credits;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+body .creditosScreen__container .creditosClosingButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+body .creditosScreen__container .creditosClosingButton i {
+  font-size: 1.5rem;
+}
+
+body .creditosScreen__containerOff {
+  display: none;
+}
+
+body .redesSocialesScreen {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 2fr 8fr;
+      grid-template-rows: 2fr 8fr;
+  justify-items: center;
+}
+
+body .redesSocialesScreen .redesSocialesClosingButton {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+}
+
+body .redesSocialesScreen .redesSocialesTitle__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 90%;
+  border-bottom: solid #fff 4px;
+  text-align: center;
+}
+
+body .redesSocialesScreen .redesSociales__container {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body .redesSocialesScreenOff {
+  display: none;
+}
+
+#header {
   height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -206,7 +321,7 @@ body #header {
           justify-content: center;
 }
 
-body #header .header__container {
+#header .header__container {
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,7 +336,7 @@ body #header .header__container {
   border-bottom: solid 4px #fff;
 }
 
-body #header .characterInfo__container {
+#header .characterInfo__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,26 +345,26 @@ body #header .characterInfo__container {
           align-items: center;
 }
 
-body #header .characterInfo__container h1 {
+#header .characterInfo__container h1 {
   font-size: 1rem;
 }
 
-body #header .closingCharacter__container {
+#header .closingCharacter__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body #header .closingCharacter__container i {
+#header .closingCharacter__container i {
   font-size: 1.3rem;
   cursor: pointer;
 }
 
-body #header .closingCharacter__container i:hover {
+#header .closingCharacter__container i:hover {
   color: #b10000;
 }
 
-body #main {
+#main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -261,7 +376,7 @@ body #main {
           justify-content: center;
 }
 
-body #main .main__container {
+#main .main__container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -276,7 +391,7 @@ body #main .main__container {
           flex-flow: column;
 }
 
-body #main .main__container .character__container {
+#main .main__container .character__container {
   height: 40vh;
   width: 90%;
   display: -webkit-box;
@@ -295,25 +410,25 @@ body #main .main__container .character__container {
   border-bottom: solid #fff 4px;
 }
 
-body #main .main__container .character__container .pic__container {
+#main .main__container .character__container .pic__container {
   height: 25vh;
   width: 50vw;
   border: solid #fff 6px;
 }
 
-body #main .main__container .character__container .pic__container .characterSpray {
+#main .main__container .character__container .pic__container .characterSpray {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-body #main .main__container .character__container .name {
+#main .main__container .character__container .name {
   padding-top: 1rem;
   font-size: 1rem;
 }
 
-body #main .main__container .stats__container {
+#main .main__container .stats__container {
   width: 90%;
   border-bottom: #fff solid 4px;
   display: -webkit-box;
@@ -329,7 +444,7 @@ body #main .main__container .stats__container {
           justify-content: center;
 }
 
-body #main .main__container .stats__container .levels__container {
+#main .main__container .stats__container .levels__container {
   height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -343,7 +458,7 @@ body #main .main__container .stats__container .levels__container {
           justify-content: space-evenly;
 }
 
-body #main .main__container .stats__container .levels__container .lvl__container {
+#main .main__container .stats__container .levels__container .lvl__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,35 +470,35 @@ body #main .main__container .stats__container .levels__container .lvl__container
           align-items: center;
 }
 
-body #main .main__container .stats__container .levels__container .lvl__container .lvl {
+#main .main__container .stats__container .levels__container .lvl__container .lvl {
   font-size: .8rem;
 }
 
-body #main .main__container .stats__container .levels__container .lvl__container .upgradePoints {
+#main .main__container .stats__container .levels__container .lvl__container .upgradePoints {
   font-size: .6rem;
 }
 
-body #main .main__container .stats__container .levels__container .lvlBar {
+#main .main__container .stats__container .levels__container .lvlBar {
   height: 90%;
   height: 2vh;
   border: solid #ffffff 2px;
   position: relative;
 }
 
-body #main .main__container .stats__container .levels__container .lvlBar .experienceAmount {
+#main .main__container .stats__container .levels__container .lvlBar .experienceAmount {
   position: absolute;
   top: -.9rem;
   right: 0;
   font-size: .5rem;
 }
 
-body #main .main__container .stats__container .levels__container .lvlBar .lvlBar__bar {
+#main .main__container .stats__container .levels__container .lvlBar .lvlBar__bar {
   height: 100%;
   width: 83%;
   background-color: #ffffff;
 }
 
-body #main .main__container .stats__container .html__container, body #main .main__container .stats__container .css__container, body #main .main__container .stats__container .javascript__container, body #main .main__container .stats__container .gitHub__container, body #main .main__container .stats__container .endurance__container {
+#main .main__container .stats__container .html__container, #main .main__container .stats__container .css__container, #main .main__container .stats__container .javascript__container, #main .main__container .stats__container .gitHub__container, #main .main__container .stats__container .endurance__container {
   height: 8vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,7 +511,7 @@ body #main .main__container .stats__container .html__container, body #main .main
           justify-content: space-evenly;
 }
 
-body #main .main__container .stats__container .html__container .upgradeButton, body #main .main__container .stats__container .css__container .upgradeButton, body #main .main__container .stats__container .javascript__container .upgradeButton, body #main .main__container .stats__container .gitHub__container .upgradeButton, body #main .main__container .stats__container .endurance__container .upgradeButton {
+#main .main__container .stats__container .html__container .upgradeButton, #main .main__container .stats__container .css__container .upgradeButton, #main .main__container .stats__container .javascript__container .upgradeButton, #main .main__container .stats__container .gitHub__container .upgradeButton, #main .main__container .stats__container .endurance__container .upgradeButton {
   height: 20px;
   width: 25px;
   border: solid #fff 1px;
@@ -410,14 +525,15 @@ body #main .main__container .stats__container .html__container .upgradeButton, b
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 2;
+  cursor: pointer;
 }
 
-body #main .main__container .stats__container .html__container .upgradeButton i, body #main .main__container .stats__container .css__container .upgradeButton i, body #main .main__container .stats__container .javascript__container .upgradeButton i, body #main .main__container .stats__container .gitHub__container .upgradeButton i, body #main .main__container .stats__container .endurance__container .upgradeButton i {
+#main .main__container .stats__container .html__container .upgradeButton i, #main .main__container .stats__container .css__container .upgradeButton i, #main .main__container .stats__container .javascript__container .upgradeButton i, #main .main__container .stats__container .gitHub__container .upgradeButton i, #main .main__container .stats__container .endurance__container .upgradeButton i {
   font-size: .6rem;
   z-index: 1;
 }
 
-body #main .main__container .stats__container .html__container .htmlTitle, body #main .main__container .stats__container .css__container .htmlTitle, body #main .main__container .stats__container .javascript__container .htmlTitle, body #main .main__container .stats__container .gitHub__container .htmlTitle, body #main .main__container .stats__container .endurance__container .htmlTitle {
+#main .main__container .stats__container .html__container .htmlTitle, #main .main__container .stats__container .css__container .htmlTitle, #main .main__container .stats__container .javascript__container .htmlTitle, #main .main__container .stats__container .gitHub__container .htmlTitle, #main .main__container .stats__container .endurance__container .htmlTitle {
   font-size: .8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -431,21 +547,21 @@ body #main .main__container .stats__container .html__container .htmlTitle, body 
   width: 50vw;
 }
 
-body #main .main__container .stats__container .html__container .htmlTitle .htmlLogo__container, body #main .main__container .stats__container .css__container .htmlTitle .htmlLogo__container, body #main .main__container .stats__container .javascript__container .htmlTitle .htmlLogo__container, body #main .main__container .stats__container .gitHub__container .htmlTitle .htmlLogo__container, body #main .main__container .stats__container .endurance__container .htmlTitle .htmlLogo__container {
+#main .main__container .stats__container .html__container .htmlTitle .htmlLogo__container, #main .main__container .stats__container .css__container .htmlTitle .htmlLogo__container, #main .main__container .stats__container .javascript__container .htmlTitle .htmlLogo__container, #main .main__container .stats__container .gitHub__container .htmlTitle .htmlLogo__container, #main .main__container .stats__container .endurance__container .htmlTitle .htmlLogo__container {
   height: 25px;
   width: 25px;
 }
 
-body #main .main__container .stats__container .html__container .htmlTitle .htmlLogo__container img, body #main .main__container .stats__container .css__container .htmlTitle .htmlLogo__container img, body #main .main__container .stats__container .javascript__container .htmlTitle .htmlLogo__container img, body #main .main__container .stats__container .gitHub__container .htmlTitle .htmlLogo__container img, body #main .main__container .stats__container .endurance__container .htmlTitle .htmlLogo__container img {
+#main .main__container .stats__container .html__container .htmlTitle .htmlLogo__container img, #main .main__container .stats__container .css__container .htmlTitle .htmlLogo__container img, #main .main__container .stats__container .javascript__container .htmlTitle .htmlLogo__container img, #main .main__container .stats__container .gitHub__container .htmlTitle .htmlLogo__container img, #main .main__container .stats__container .endurance__container .htmlTitle .htmlLogo__container img {
   height: 100%;
   width: 100%;
 }
 
-body #main .main__container .stats__container .html__container .htmlTitle span, body #main .main__container .stats__container .css__container .htmlTitle span, body #main .main__container .stats__container .javascript__container .htmlTitle span, body #main .main__container .stats__container .gitHub__container .htmlTitle span, body #main .main__container .stats__container .endurance__container .htmlTitle span {
+#main .main__container .stats__container .html__container .htmlTitle span, #main .main__container .stats__container .css__container .htmlTitle span, #main .main__container .stats__container .javascript__container .htmlTitle span, #main .main__container .stats__container .gitHub__container .htmlTitle span, #main .main__container .stats__container .endurance__container .htmlTitle span {
   margin-left: 5px;
 }
 
-body #main .main__container .stats__container .html__container .htmlStats__container, body #main .main__container .stats__container .css__container .htmlStats__container, body #main .main__container .stats__container .javascript__container .htmlStats__container, body #main .main__container .stats__container .gitHub__container .htmlStats__container, body #main .main__container .stats__container .endurance__container .htmlStats__container {
+#main .main__container .stats__container .html__container .htmlStats__container, #main .main__container .stats__container .css__container .htmlStats__container, #main .main__container .stats__container .javascript__container .htmlStats__container, #main .main__container .stats__container .gitHub__container .htmlStats__container, #main .main__container .stats__container .endurance__container .htmlStats__container {
   height: 2vh;
   display: -ms-grid;
   display: grid;
@@ -457,23 +573,23 @@ body #main .main__container .stats__container .html__container .htmlStats__conta
   margin-left: .5rem;
 }
 
-body #main .main__container .stats__container .html__container .htmlStats__container .htmlRed, body #main .main__container .stats__container .css__container .htmlStats__container .htmlRed, body #main .main__container .stats__container .javascript__container .htmlStats__container .htmlRed, body #main .main__container .stats__container .gitHub__container .htmlStats__container .htmlRed, body #main .main__container .stats__container .endurance__container .htmlStats__container .htmlRed {
+#main .main__container .stats__container .html__container .htmlStats__container .htmlRed, #main .main__container .stats__container .css__container .htmlStats__container .htmlRed, #main .main__container .stats__container .javascript__container .htmlStats__container .htmlRed, #main .main__container .stats__container .gitHub__container .htmlStats__container .htmlRed, #main .main__container .stats__container .endurance__container .htmlStats__container .htmlRed {
   background-color: #ff3d3d;
 }
 
-body #main .main__container .stats__container .html__container .htmlStats__container .htmlYellow, body #main .main__container .stats__container .css__container .htmlStats__container .htmlYellow, body #main .main__container .stats__container .javascript__container .htmlStats__container .htmlYellow, body #main .main__container .stats__container .gitHub__container .htmlStats__container .htmlYellow, body #main .main__container .stats__container .endurance__container .htmlStats__container .htmlYellow {
+#main .main__container .stats__container .html__container .htmlStats__container .htmlYellow, #main .main__container .stats__container .css__container .htmlStats__container .htmlYellow, #main .main__container .stats__container .javascript__container .htmlStats__container .htmlYellow, #main .main__container .stats__container .gitHub__container .htmlStats__container .htmlYellow, #main .main__container .stats__container .endurance__container .htmlStats__container .htmlYellow {
   background-color: #ffff54;
 }
 
-body #main .main__container .stats__container .html__container .htmlStats__container .htmlLightGreen, body #main .main__container .stats__container .css__container .htmlStats__container .htmlLightGreen, body #main .main__container .stats__container .javascript__container .htmlStats__container .htmlLightGreen, body #main .main__container .stats__container .gitHub__container .htmlStats__container .htmlLightGreen, body #main .main__container .stats__container .endurance__container .htmlStats__container .htmlLightGreen {
+#main .main__container .stats__container .html__container .htmlStats__container .htmlLightGreen, #main .main__container .stats__container .css__container .htmlStats__container .htmlLightGreen, #main .main__container .stats__container .javascript__container .htmlStats__container .htmlLightGreen, #main .main__container .stats__container .gitHub__container .htmlStats__container .htmlLightGreen, #main .main__container .stats__container .endurance__container .htmlStats__container .htmlLightGreen {
   background-color: #6cfb6c;
 }
 
-body #main .main__container .stats__container .html__container .htmlStats__container .htmlGreen, body #main .main__container .stats__container .css__container .htmlStats__container .htmlGreen, body #main .main__container .stats__container .javascript__container .htmlStats__container .htmlGreen, body #main .main__container .stats__container .gitHub__container .htmlStats__container .htmlGreen, body #main .main__container .stats__container .endurance__container .htmlStats__container .htmlGreen {
+#main .main__container .stats__container .html__container .htmlStats__container .htmlGreen, #main .main__container .stats__container .css__container .htmlStats__container .htmlGreen, #main .main__container .stats__container .javascript__container .htmlStats__container .htmlGreen, #main .main__container .stats__container .gitHub__container .htmlStats__container .htmlGreen, #main .main__container .stats__container .endurance__container .htmlStats__container .htmlGreen {
   background-color: lime;
 }
 
-body #main .main__container .stats__container .html__container .cssTitle, body #main .main__container .stats__container .css__container .cssTitle, body #main .main__container .stats__container .javascript__container .cssTitle, body #main .main__container .stats__container .gitHub__container .cssTitle, body #main .main__container .stats__container .endurance__container .cssTitle {
+#main .main__container .stats__container .html__container .cssTitle, #main .main__container .stats__container .css__container .cssTitle, #main .main__container .stats__container .javascript__container .cssTitle, #main .main__container .stats__container .gitHub__container .cssTitle, #main .main__container .stats__container .endurance__container .cssTitle {
   font-size: .8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -487,21 +603,21 @@ body #main .main__container .stats__container .html__container .cssTitle, body #
   width: 50vw;
 }
 
-body #main .main__container .stats__container .html__container .cssTitle span, body #main .main__container .stats__container .css__container .cssTitle span, body #main .main__container .stats__container .javascript__container .cssTitle span, body #main .main__container .stats__container .gitHub__container .cssTitle span, body #main .main__container .stats__container .endurance__container .cssTitle span {
+#main .main__container .stats__container .html__container .cssTitle span, #main .main__container .stats__container .css__container .cssTitle span, #main .main__container .stats__container .javascript__container .cssTitle span, #main .main__container .stats__container .gitHub__container .cssTitle span, #main .main__container .stats__container .endurance__container .cssTitle span {
   margin-left: 5px;
 }
 
-body #main .main__container .stats__container .html__container .cssTitle .cssLogo__container, body #main .main__container .stats__container .css__container .cssTitle .cssLogo__container, body #main .main__container .stats__container .javascript__container .cssTitle .cssLogo__container, body #main .main__container .stats__container .gitHub__container .cssTitle .cssLogo__container, body #main .main__container .stats__container .endurance__container .cssTitle .cssLogo__container {
+#main .main__container .stats__container .html__container .cssTitle .cssLogo__container, #main .main__container .stats__container .css__container .cssTitle .cssLogo__container, #main .main__container .stats__container .javascript__container .cssTitle .cssLogo__container, #main .main__container .stats__container .gitHub__container .cssTitle .cssLogo__container, #main .main__container .stats__container .endurance__container .cssTitle .cssLogo__container {
   height: 25px;
   width: 25px;
 }
 
-body #main .main__container .stats__container .html__container .cssTitle .cssLogo__container img, body #main .main__container .stats__container .css__container .cssTitle .cssLogo__container img, body #main .main__container .stats__container .javascript__container .cssTitle .cssLogo__container img, body #main .main__container .stats__container .gitHub__container .cssTitle .cssLogo__container img, body #main .main__container .stats__container .endurance__container .cssTitle .cssLogo__container img {
+#main .main__container .stats__container .html__container .cssTitle .cssLogo__container img, #main .main__container .stats__container .css__container .cssTitle .cssLogo__container img, #main .main__container .stats__container .javascript__container .cssTitle .cssLogo__container img, #main .main__container .stats__container .gitHub__container .cssTitle .cssLogo__container img, #main .main__container .stats__container .endurance__container .cssTitle .cssLogo__container img {
   height: 100%;
   width: 100%;
 }
 
-body #main .main__container .stats__container .html__container .cssStats__container, body #main .main__container .stats__container .css__container .cssStats__container, body #main .main__container .stats__container .javascript__container .cssStats__container, body #main .main__container .stats__container .gitHub__container .cssStats__container, body #main .main__container .stats__container .endurance__container .cssStats__container {
+#main .main__container .stats__container .html__container .cssStats__container, #main .main__container .stats__container .css__container .cssStats__container, #main .main__container .stats__container .javascript__container .cssStats__container, #main .main__container .stats__container .gitHub__container .cssStats__container, #main .main__container .stats__container .endurance__container .cssStats__container {
   height: 2vh;
   display: -ms-grid;
   display: grid;
@@ -513,23 +629,23 @@ body #main .main__container .stats__container .html__container .cssStats__contai
   margin-left: .5rem;
 }
 
-body #main .main__container .stats__container .html__container .cssStats__container .cssRed, body #main .main__container .stats__container .css__container .cssStats__container .cssRed, body #main .main__container .stats__container .javascript__container .cssStats__container .cssRed, body #main .main__container .stats__container .gitHub__container .cssStats__container .cssRed, body #main .main__container .stats__container .endurance__container .cssStats__container .cssRed {
+#main .main__container .stats__container .html__container .cssStats__container .cssRed, #main .main__container .stats__container .css__container .cssStats__container .cssRed, #main .main__container .stats__container .javascript__container .cssStats__container .cssRed, #main .main__container .stats__container .gitHub__container .cssStats__container .cssRed, #main .main__container .stats__container .endurance__container .cssStats__container .cssRed {
   background-color: #ff3d3d;
 }
 
-body #main .main__container .stats__container .html__container .cssStats__container .cssYellow, body #main .main__container .stats__container .css__container .cssStats__container .cssYellow, body #main .main__container .stats__container .javascript__container .cssStats__container .cssYellow, body #main .main__container .stats__container .gitHub__container .cssStats__container .cssYellow, body #main .main__container .stats__container .endurance__container .cssStats__container .cssYellow {
+#main .main__container .stats__container .html__container .cssStats__container .cssYellow, #main .main__container .stats__container .css__container .cssStats__container .cssYellow, #main .main__container .stats__container .javascript__container .cssStats__container .cssYellow, #main .main__container .stats__container .gitHub__container .cssStats__container .cssYellow, #main .main__container .stats__container .endurance__container .cssStats__container .cssYellow {
   background-color: #ffff54;
 }
 
-body #main .main__container .stats__container .html__container .cssStats__container .cssLightGreen, body #main .main__container .stats__container .css__container .cssStats__container .cssLightGreen, body #main .main__container .stats__container .javascript__container .cssStats__container .cssLightGreen, body #main .main__container .stats__container .gitHub__container .cssStats__container .cssLightGreen, body #main .main__container .stats__container .endurance__container .cssStats__container .cssLightGreen {
+#main .main__container .stats__container .html__container .cssStats__container .cssLightGreen, #main .main__container .stats__container .css__container .cssStats__container .cssLightGreen, #main .main__container .stats__container .javascript__container .cssStats__container .cssLightGreen, #main .main__container .stats__container .gitHub__container .cssStats__container .cssLightGreen, #main .main__container .stats__container .endurance__container .cssStats__container .cssLightGreen {
   background-color: #6cfb6c;
 }
 
-body #main .main__container .stats__container .html__container .cssStats__container .cssGreen, body #main .main__container .stats__container .css__container .cssStats__container .cssGreen, body #main .main__container .stats__container .javascript__container .cssStats__container .cssGreen, body #main .main__container .stats__container .gitHub__container .cssStats__container .cssGreen, body #main .main__container .stats__container .endurance__container .cssStats__container .cssGreen {
+#main .main__container .stats__container .html__container .cssStats__container .cssGreen, #main .main__container .stats__container .css__container .cssStats__container .cssGreen, #main .main__container .stats__container .javascript__container .cssStats__container .cssGreen, #main .main__container .stats__container .gitHub__container .cssStats__container .cssGreen, #main .main__container .stats__container .endurance__container .cssStats__container .cssGreen {
   background-color: lime;
 }
 
-body #main .main__container .stats__container .html__container .javascriptTitle, body #main .main__container .stats__container .css__container .javascriptTitle, body #main .main__container .stats__container .javascript__container .javascriptTitle, body #main .main__container .stats__container .gitHub__container .javascriptTitle, body #main .main__container .stats__container .endurance__container .javascriptTitle {
+#main .main__container .stats__container .html__container .javascriptTitle, #main .main__container .stats__container .css__container .javascriptTitle, #main .main__container .stats__container .javascript__container .javascriptTitle, #main .main__container .stats__container .gitHub__container .javascriptTitle, #main .main__container .stats__container .endurance__container .javascriptTitle {
   font-size: .8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -543,21 +659,21 @@ body #main .main__container .stats__container .html__container .javascriptTitle,
   width: 50vw;
 }
 
-body #main .main__container .stats__container .html__container .javascriptTitle span, body #main .main__container .stats__container .css__container .javascriptTitle span, body #main .main__container .stats__container .javascript__container .javascriptTitle span, body #main .main__container .stats__container .gitHub__container .javascriptTitle span, body #main .main__container .stats__container .endurance__container .javascriptTitle span {
+#main .main__container .stats__container .html__container .javascriptTitle span, #main .main__container .stats__container .css__container .javascriptTitle span, #main .main__container .stats__container .javascript__container .javascriptTitle span, #main .main__container .stats__container .gitHub__container .javascriptTitle span, #main .main__container .stats__container .endurance__container .javascriptTitle span {
   margin-left: 5px;
 }
 
-body #main .main__container .stats__container .html__container .javascriptTitle .jsLogo__container, body #main .main__container .stats__container .css__container .javascriptTitle .jsLogo__container, body #main .main__container .stats__container .javascript__container .javascriptTitle .jsLogo__container, body #main .main__container .stats__container .gitHub__container .javascriptTitle .jsLogo__container, body #main .main__container .stats__container .endurance__container .javascriptTitle .jsLogo__container {
+#main .main__container .stats__container .html__container .javascriptTitle .jsLogo__container, #main .main__container .stats__container .css__container .javascriptTitle .jsLogo__container, #main .main__container .stats__container .javascript__container .javascriptTitle .jsLogo__container, #main .main__container .stats__container .gitHub__container .javascriptTitle .jsLogo__container, #main .main__container .stats__container .endurance__container .javascriptTitle .jsLogo__container {
   height: 25px;
   width: 25px;
 }
 
-body #main .main__container .stats__container .html__container .javascriptTitle .jsLogo__container img, body #main .main__container .stats__container .css__container .javascriptTitle .jsLogo__container img, body #main .main__container .stats__container .javascript__container .javascriptTitle .jsLogo__container img, body #main .main__container .stats__container .gitHub__container .javascriptTitle .jsLogo__container img, body #main .main__container .stats__container .endurance__container .javascriptTitle .jsLogo__container img {
+#main .main__container .stats__container .html__container .javascriptTitle .jsLogo__container img, #main .main__container .stats__container .css__container .javascriptTitle .jsLogo__container img, #main .main__container .stats__container .javascript__container .javascriptTitle .jsLogo__container img, #main .main__container .stats__container .gitHub__container .javascriptTitle .jsLogo__container img, #main .main__container .stats__container .endurance__container .javascriptTitle .jsLogo__container img {
   height: 100%;
   width: 100%;
 }
 
-body #main .main__container .stats__container .html__container .jsStats__container, body #main .main__container .stats__container .css__container .jsStats__container, body #main .main__container .stats__container .javascript__container .jsStats__container, body #main .main__container .stats__container .gitHub__container .jsStats__container, body #main .main__container .stats__container .endurance__container .jsStats__container {
+#main .main__container .stats__container .html__container .jsStats__container, #main .main__container .stats__container .css__container .jsStats__container, #main .main__container .stats__container .javascript__container .jsStats__container, #main .main__container .stats__container .gitHub__container .jsStats__container, #main .main__container .stats__container .endurance__container .jsStats__container {
   height: 2vh;
   display: -ms-grid;
   display: grid;
@@ -569,23 +685,23 @@ body #main .main__container .stats__container .html__container .jsStats__contain
   margin-left: .5rem;
 }
 
-body #main .main__container .stats__container .html__container .jsStats__container .jsRed, body #main .main__container .stats__container .css__container .jsStats__container .jsRed, body #main .main__container .stats__container .javascript__container .jsStats__container .jsRed, body #main .main__container .stats__container .gitHub__container .jsStats__container .jsRed, body #main .main__container .stats__container .endurance__container .jsStats__container .jsRed {
+#main .main__container .stats__container .html__container .jsStats__container .jsRed, #main .main__container .stats__container .css__container .jsStats__container .jsRed, #main .main__container .stats__container .javascript__container .jsStats__container .jsRed, #main .main__container .stats__container .gitHub__container .jsStats__container .jsRed, #main .main__container .stats__container .endurance__container .jsStats__container .jsRed {
   background-color: #ff3d3d;
 }
 
-body #main .main__container .stats__container .html__container .jsStats__container .jsYellow, body #main .main__container .stats__container .css__container .jsStats__container .jsYellow, body #main .main__container .stats__container .javascript__container .jsStats__container .jsYellow, body #main .main__container .stats__container .gitHub__container .jsStats__container .jsYellow, body #main .main__container .stats__container .endurance__container .jsStats__container .jsYellow {
+#main .main__container .stats__container .html__container .jsStats__container .jsYellow, #main .main__container .stats__container .css__container .jsStats__container .jsYellow, #main .main__container .stats__container .javascript__container .jsStats__container .jsYellow, #main .main__container .stats__container .gitHub__container .jsStats__container .jsYellow, #main .main__container .stats__container .endurance__container .jsStats__container .jsYellow {
   background-color: #ffff54;
 }
 
-body #main .main__container .stats__container .html__container .jsStats__container .jsLightGreen, body #main .main__container .stats__container .css__container .jsStats__container .jsLightGreen, body #main .main__container .stats__container .javascript__container .jsStats__container .jsLightGreen, body #main .main__container .stats__container .gitHub__container .jsStats__container .jsLightGreen, body #main .main__container .stats__container .endurance__container .jsStats__container .jsLightGreen {
+#main .main__container .stats__container .html__container .jsStats__container .jsLightGreen, #main .main__container .stats__container .css__container .jsStats__container .jsLightGreen, #main .main__container .stats__container .javascript__container .jsStats__container .jsLightGreen, #main .main__container .stats__container .gitHub__container .jsStats__container .jsLightGreen, #main .main__container .stats__container .endurance__container .jsStats__container .jsLightGreen {
   background-color: #6cfb6c;
 }
 
-body #main .main__container .stats__container .html__container .jsStats__container .jsGreen, body #main .main__container .stats__container .css__container .jsStats__container .jsGreen, body #main .main__container .stats__container .javascript__container .jsStats__container .jsGreen, body #main .main__container .stats__container .gitHub__container .jsStats__container .jsGreen, body #main .main__container .stats__container .endurance__container .jsStats__container .jsGreen {
+#main .main__container .stats__container .html__container .jsStats__container .jsGreen, #main .main__container .stats__container .css__container .jsStats__container .jsGreen, #main .main__container .stats__container .javascript__container .jsStats__container .jsGreen, #main .main__container .stats__container .gitHub__container .jsStats__container .jsGreen, #main .main__container .stats__container .endurance__container .jsStats__container .jsGreen {
   background-color: lime;
 }
 
-body #main .main__container .stats__container .html__container .gitHubTitle, body #main .main__container .stats__container .css__container .gitHubTitle, body #main .main__container .stats__container .javascript__container .gitHubTitle, body #main .main__container .stats__container .gitHub__container .gitHubTitle, body #main .main__container .stats__container .endurance__container .gitHubTitle {
+#main .main__container .stats__container .html__container .gitHubTitle, #main .main__container .stats__container .css__container .gitHubTitle, #main .main__container .stats__container .javascript__container .gitHubTitle, #main .main__container .stats__container .gitHub__container .gitHubTitle, #main .main__container .stats__container .endurance__container .gitHubTitle {
   font-size: .8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -599,21 +715,21 @@ body #main .main__container .stats__container .html__container .gitHubTitle, bod
   width: 50vw;
 }
 
-body #main .main__container .stats__container .html__container .gitHubTitle span, body #main .main__container .stats__container .css__container .gitHubTitle span, body #main .main__container .stats__container .javascript__container .gitHubTitle span, body #main .main__container .stats__container .gitHub__container .gitHubTitle span, body #main .main__container .stats__container .endurance__container .gitHubTitle span {
+#main .main__container .stats__container .html__container .gitHubTitle span, #main .main__container .stats__container .css__container .gitHubTitle span, #main .main__container .stats__container .javascript__container .gitHubTitle span, #main .main__container .stats__container .gitHub__container .gitHubTitle span, #main .main__container .stats__container .endurance__container .gitHubTitle span {
   margin-left: 5px;
 }
 
-body #main .main__container .stats__container .html__container .gitHubTitle .gitLogo__container, body #main .main__container .stats__container .css__container .gitHubTitle .gitLogo__container, body #main .main__container .stats__container .javascript__container .gitHubTitle .gitLogo__container, body #main .main__container .stats__container .gitHub__container .gitHubTitle .gitLogo__container, body #main .main__container .stats__container .endurance__container .gitHubTitle .gitLogo__container {
+#main .main__container .stats__container .html__container .gitHubTitle .gitLogo__container, #main .main__container .stats__container .css__container .gitHubTitle .gitLogo__container, #main .main__container .stats__container .javascript__container .gitHubTitle .gitLogo__container, #main .main__container .stats__container .gitHub__container .gitHubTitle .gitLogo__container, #main .main__container .stats__container .endurance__container .gitHubTitle .gitLogo__container {
   height: 25px;
   width: 25px;
 }
 
-body #main .main__container .stats__container .html__container .gitHubTitle .gitLogo__container img, body #main .main__container .stats__container .css__container .gitHubTitle .gitLogo__container img, body #main .main__container .stats__container .javascript__container .gitHubTitle .gitLogo__container img, body #main .main__container .stats__container .gitHub__container .gitHubTitle .gitLogo__container img, body #main .main__container .stats__container .endurance__container .gitHubTitle .gitLogo__container img {
+#main .main__container .stats__container .html__container .gitHubTitle .gitLogo__container img, #main .main__container .stats__container .css__container .gitHubTitle .gitLogo__container img, #main .main__container .stats__container .javascript__container .gitHubTitle .gitLogo__container img, #main .main__container .stats__container .gitHub__container .gitHubTitle .gitLogo__container img, #main .main__container .stats__container .endurance__container .gitHubTitle .gitLogo__container img {
   height: 100%;
   width: 100%;
 }
 
-body #main .main__container .stats__container .html__container .gitStats__container, body #main .main__container .stats__container .css__container .gitStats__container, body #main .main__container .stats__container .javascript__container .gitStats__container, body #main .main__container .stats__container .gitHub__container .gitStats__container, body #main .main__container .stats__container .endurance__container .gitStats__container {
+#main .main__container .stats__container .html__container .gitStats__container, #main .main__container .stats__container .css__container .gitStats__container, #main .main__container .stats__container .javascript__container .gitStats__container, #main .main__container .stats__container .gitHub__container .gitStats__container, #main .main__container .stats__container .endurance__container .gitStats__container {
   height: 2vh;
   display: -ms-grid;
   display: grid;
@@ -625,23 +741,23 @@ body #main .main__container .stats__container .html__container .gitStats__contai
   margin-left: .5rem;
 }
 
-body #main .main__container .stats__container .html__container .gitStats__container .gitRed, body #main .main__container .stats__container .css__container .gitStats__container .gitRed, body #main .main__container .stats__container .javascript__container .gitStats__container .gitRed, body #main .main__container .stats__container .gitHub__container .gitStats__container .gitRed, body #main .main__container .stats__container .endurance__container .gitStats__container .gitRed {
+#main .main__container .stats__container .html__container .gitStats__container .gitRed, #main .main__container .stats__container .css__container .gitStats__container .gitRed, #main .main__container .stats__container .javascript__container .gitStats__container .gitRed, #main .main__container .stats__container .gitHub__container .gitStats__container .gitRed, #main .main__container .stats__container .endurance__container .gitStats__container .gitRed {
   background-color: #ff3d3d;
 }
 
-body #main .main__container .stats__container .html__container .gitStats__container .gitYellow, body #main .main__container .stats__container .css__container .gitStats__container .gitYellow, body #main .main__container .stats__container .javascript__container .gitStats__container .gitYellow, body #main .main__container .stats__container .gitHub__container .gitStats__container .gitYellow, body #main .main__container .stats__container .endurance__container .gitStats__container .gitYellow {
+#main .main__container .stats__container .html__container .gitStats__container .gitYellow, #main .main__container .stats__container .css__container .gitStats__container .gitYellow, #main .main__container .stats__container .javascript__container .gitStats__container .gitYellow, #main .main__container .stats__container .gitHub__container .gitStats__container .gitYellow, #main .main__container .stats__container .endurance__container .gitStats__container .gitYellow {
   background-color: #ffff54;
 }
 
-body #main .main__container .stats__container .html__container .gitStats__container .gitLightGreen, body #main .main__container .stats__container .css__container .gitStats__container .gitLightGreen, body #main .main__container .stats__container .javascript__container .gitStats__container .gitLightGreen, body #main .main__container .stats__container .gitHub__container .gitStats__container .gitLightGreen, body #main .main__container .stats__container .endurance__container .gitStats__container .gitLightGreen {
+#main .main__container .stats__container .html__container .gitStats__container .gitLightGreen, #main .main__container .stats__container .css__container .gitStats__container .gitLightGreen, #main .main__container .stats__container .javascript__container .gitStats__container .gitLightGreen, #main .main__container .stats__container .gitHub__container .gitStats__container .gitLightGreen, #main .main__container .stats__container .endurance__container .gitStats__container .gitLightGreen {
   background-color: #6cfb6c;
 }
 
-body #main .main__container .stats__container .html__container .gitStats__container .gitGreen, body #main .main__container .stats__container .css__container .gitStats__container .gitGreen, body #main .main__container .stats__container .javascript__container .gitStats__container .gitGreen, body #main .main__container .stats__container .gitHub__container .gitStats__container .gitGreen, body #main .main__container .stats__container .endurance__container .gitStats__container .gitGreen {
+#main .main__container .stats__container .html__container .gitStats__container .gitGreen, #main .main__container .stats__container .css__container .gitStats__container .gitGreen, #main .main__container .stats__container .javascript__container .gitStats__container .gitGreen, #main .main__container .stats__container .gitHub__container .gitStats__container .gitGreen, #main .main__container .stats__container .endurance__container .gitStats__container .gitGreen {
   background-color: lime;
 }
 
-body #main .main__container .stats__container .html__container .gitStats__container .enduranceTitle, body #main .main__container .stats__container .css__container .gitStats__container .enduranceTitle, body #main .main__container .stats__container .javascript__container .gitStats__container .enduranceTitle, body #main .main__container .stats__container .gitHub__container .gitStats__container .enduranceTitle, body #main .main__container .stats__container .endurance__container .gitStats__container .enduranceTitle {
+#main .main__container .stats__container .html__container .gitStats__container .enduranceTitle, #main .main__container .stats__container .css__container .gitStats__container .enduranceTitle, #main .main__container .stats__container .javascript__container .gitStats__container .enduranceTitle, #main .main__container .stats__container .gitHub__container .gitStats__container .enduranceTitle, #main .main__container .stats__container .endurance__container .gitStats__container .enduranceTitle {
   font-size: .8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -654,15 +770,15 @@ body #main .main__container .stats__container .html__container .gitStats__contai
           justify-content: center;
 }
 
-body #main .main__container .stats__container .html__container .gitStats__container .enduranceTitle span, body #main .main__container .stats__container .css__container .gitStats__container .enduranceTitle span, body #main .main__container .stats__container .javascript__container .gitStats__container .enduranceTitle span, body #main .main__container .stats__container .gitHub__container .gitStats__container .enduranceTitle span, body #main .main__container .stats__container .endurance__container .gitStats__container .enduranceTitle span {
+#main .main__container .stats__container .html__container .gitStats__container .enduranceTitle span, #main .main__container .stats__container .css__container .gitStats__container .enduranceTitle span, #main .main__container .stats__container .javascript__container .gitStats__container .enduranceTitle span, #main .main__container .stats__container .gitHub__container .gitStats__container .enduranceTitle span, #main .main__container .stats__container .endurance__container .gitStats__container .enduranceTitle span {
   margin-left: 5px;
 }
 
-body #main .main__container .stats__container .html__container .gitStats__container .enduranceNumbers, body #main .main__container .stats__container .css__container .gitStats__container .enduranceNumbers, body #main .main__container .stats__container .javascript__container .gitStats__container .enduranceNumbers, body #main .main__container .stats__container .gitHub__container .gitStats__container .enduranceNumbers, body #main .main__container .stats__container .endurance__container .gitStats__container .enduranceNumbers {
+#main .main__container .stats__container .html__container .gitStats__container .enduranceNumbers, #main .main__container .stats__container .css__container .gitStats__container .enduranceNumbers, #main .main__container .stats__container .javascript__container .gitStats__container .enduranceNumbers, #main .main__container .stats__container .gitHub__container .gitStats__container .enduranceNumbers, #main .main__container .stats__container .endurance__container .gitStats__container .enduranceNumbers {
   font-size: .6rem;
 }
 
-body #main .main__container .atributosSection__container {
+#main .main__container .atributosSection__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -682,7 +798,7 @@ body #main .main__container .atributosSection__container {
   position: relative;
 }
 
-body #main .main__container .atributosSection__container .powerInfo {
+#main .main__container .atributosSection__container .powerInfo {
   height: 80%;
   width: 95%;
   position: absolute;
@@ -706,39 +822,39 @@ body #main .main__container .atributosSection__container .powerInfo {
           flex-flow: column;
 }
 
-body #main .main__container .atributosSection__container .powerInfo h4 {
+#main .main__container .atributosSection__container .powerInfo h4 {
   width: 80%;
   text-align: center;
   border-bottom: solid #fff 2px;
   padding-bottom: 1rem;
 }
 
-body #main .main__container .atributosSection__container .powerInfo span {
+#main .main__container .atributosSection__container .powerInfo span {
   font-size: .8rem;
   line-height: 1.2rem;
   text-align: center;
   width: 90%;
 }
 
-body #main .main__container .atributosSection__container .powerInfo span b {
+#main .main__container .atributosSection__container .powerInfo span b {
   color: yellow;
 }
 
-body #main .main__container .atributosSection__container .powerInfo .closePowerinfo__button {
+#main .main__container .atributosSection__container .powerInfo .closePowerinfo__button {
   position: absolute;
   right: 1rem;
   top: 1rem;
 }
 
-body #main .main__container .atributosSection__container .powerInfoOff {
+#main .main__container .atributosSection__container .powerInfoOff {
   display: none;
 }
 
-body #main .main__container .atributosSection__container h2 {
+#main .main__container .atributosSection__container h2 {
   font-size: 1rem;
 }
 
-body #main .main__container .atributosSection__container .atributosSlider__container {
+#main .main__container .atributosSection__container .atributosSlider__container {
   height: 20vh;
   border: solid #fff 4px;
   width: 50vw;
@@ -755,28 +871,31 @@ body #main .main__container .atributosSection__container .atributosSlider__conta
   z-index: 1;
 }
 
-body #main .main__container .atributosSection__container .atributosSlider__container .sliderImage {
+#main .main__container .atributosSection__container .atributosSlider__container .sliderImage {
   height: 90%;
   width: 90%;
   -o-object-fit: contain;
      object-fit: contain;
+  cursor: pointer;
 }
 
-body #main .main__container .atributosSection__container .atributosSlider__container .leftButton {
+#main .main__container .atributosSection__container .atributosSlider__container .leftButton {
   position: absolute;
   left: -2rem;
   font-size: 1.5rem;
   z-index: 2;
+  cursor: pointer;
 }
 
-body #main .main__container .atributosSection__container .atributosSlider__container .rightButton {
+#main .main__container .atributosSection__container .atributosSlider__container .rightButton {
   position: absolute;
   right: -2rem;
   font-size: 1.5rem;
   z-index: 2;
+  cursor: pointer;
 }
 
-body #main .main__container .atributosSection__container .atributteName__container {
+#main .main__container .atributosSection__container .atributteName__container {
   height: 4vh;
   width: 50vw;
   display: -webkit-box;
@@ -790,14 +909,14 @@ body #main .main__container .atributosSection__container .atributteName__contain
           justify-content: center;
 }
 
-body #main .main__container .atributosSection__container .atributteName__container .atributteName {
+#main .main__container .atributosSection__container .atributteName__container .atributteName {
   font-size: .8rem;
   position: relative;
   bottom: 1rem;
   white-space: nowrap;
 }
 
-body #main .main__container .characterInfo__container {
+#main .main__container .characterInfo__container {
   height: 50vh;
   width: 90%;
   display: -webkit-box;
@@ -816,11 +935,11 @@ body #main .main__container .characterInfo__container {
   border-bottom: solid #fff 4px;
 }
 
-body #main .main__container .characterInfo__container .characterInfo__title {
+#main .main__container .characterInfo__container .characterInfo__title {
   font-size: 1rem;
 }
 
-body #main .main__container .characterInfo__container .info__container {
+#main .main__container .characterInfo__container .info__container {
   width: 95%;
   height: 30vh;
   font-size: .6rem;
@@ -837,7 +956,7 @@ body #main .main__container .characterInfo__container .info__container {
           align-items: flex-start;
 }
 
-body #main .main__container .portfolio__container {
+#main .main__container .portfolio__container {
   height: 60vh;
   width: 90%;
   border-bottom: solid #fff 4px;
@@ -855,7 +974,7 @@ body #main .main__container .portfolio__container {
   position: relative;
 }
 
-body #main .main__container .portfolio__container .webPage__container {
+#main .main__container .portfolio__container .webPage__container {
   height: 100%;
   width: 100%;
   -webkit-box-orient: vertical;
@@ -873,7 +992,7 @@ body #main .main__container .portfolio__container .webPage__container {
           justify-content: center;
 }
 
-body #main .main__container .portfolio__container .webPage__container .webPage {
+#main .main__container .portfolio__container .webPage__container .webPage {
   height: 70%;
   width: 90%;
   display: -webkit-box;
@@ -893,7 +1012,7 @@ body #main .main__container .portfolio__container .webPage__container .webPage {
   border: solid #fff 4px;
 }
 
-body #main .main__container .portfolio__container .webPage__container .webPage .pageLink__container {
+#main .main__container .portfolio__container .webPage__container .webPage .pageLink__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -912,21 +1031,21 @@ body #main .main__container .portfolio__container .webPage__container .webPage .
           justify-content: center;
 }
 
-body #main .main__container .portfolio__container .webPage__container .webPage .pageLink__container i {
+#main .main__container .portfolio__container .webPage__container .webPage .pageLink__container i {
   font-size: .6rem;
   margin-right: 5px;
 }
 
-body #main .main__container .portfolio__container .webPage__container .webPage .pageLink__container a {
+#main .main__container .portfolio__container .webPage__container .webPage .pageLink__container a {
   font-size: .6rem;
   text-decoration: none;
 }
 
-body #main .main__container .portfolio__container .webPage__container .webPage .pageLink__containerOff {
+#main .main__container .portfolio__container .webPage__container .webPage .pageLink__containerOff {
   display: none;
 }
 
-body #main .main__container .portfolio__container .webPage__container .webPage .gitLink__container {
+#main .main__container .portfolio__container .webPage__container .webPage .gitLink__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -944,56 +1063,56 @@ body #main .main__container .portfolio__container .webPage__container .webPage .
   width: 60%;
 }
 
-body #main .main__container .portfolio__container .webPage__container .webPage .gitLink__container i {
+#main .main__container .portfolio__container .webPage__container .webPage .gitLink__container i {
   font-size: .6rem;
   margin-right: 5px;
 }
 
-body #main .main__container .portfolio__container .webPage__container .webPage .gitLink__container a {
+#main .main__container .portfolio__container .webPage__container .webPage .gitLink__container a {
   font-size: .6rem;
   text-decoration: none;
 }
 
-body #main .main__container .portfolio__container .webPage__container .webPage .gitLink__containerOff {
+#main .main__container .portfolio__container .webPage__container .webPage .gitLink__containerOff {
   display: none;
 }
 
-body #main .main__container .portfolio__container .webPage__container .webPage-cyberpunk {
+#main .main__container .portfolio__container .webPage__container .webPage-cyberpunk {
   background-image: url(imgs/cyberpunk8bit.png);
   background-position: center center;
   background-size: cover;
 }
 
-body #main .main__container .portfolio__container .webPage__container .webPage-bocchi {
+#main .main__container .portfolio__container .webPage__container .webPage-bocchi {
   background-image: url(imgs/bocchi8bit.png);
   background-position: center center;
   background-size: cover;
 }
 
-body #main .main__container .portfolio__container .webPage__container .webPage-maidCafe {
+#main .main__container .portfolio__container .webPage__container .webPage-maidCafe {
   background-image: url(imgs/maidCafePixelLogo.png);
   background-position: center center;
   background-size: cover;
 }
 
-body #main .main__container .portfolio__container .webPage__container .webPage-evangelion {
+#main .main__container .portfolio__container .webPage__container .webPage-evangelion {
   background-image: url(imgs/Evangelion8bit.jpg);
   background-position: center center;
   background-size: cover;
 }
 
-body #main .main__container .portfolio__container .webPage__container .webPageOff {
+#main .main__container .portfolio__container .webPage__container .webPageOff {
   display: none;
 }
 
-body #main .main__container .portfolio__container .webPage__container h5 {
+#main .main__container .portfolio__container .webPage__container h5 {
   margin-top: 10px;
   text-align: center;
   font-size: .7rem;
   white-space: nowrap;
 }
 
-body #footer {
+#footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1005,7 +1124,7 @@ body #footer {
           justify-content: center;
 }
 
-body #footer .footer__container {
+#footer .footer__container {
   height: 10vh;
   width: 90%;
   display: -webkit-box;
@@ -1019,7 +1138,7 @@ body #footer .footer__container {
           justify-content: center;
 }
 
-body #footer .footer__container span {
+#footer .footer__container span {
   font-size: .5rem;
 }
 
@@ -1056,6 +1175,54 @@ body #footer .footer__container span {
   }
   100% {
     color: #fff;
+  }
+}
+
+@-webkit-keyframes credits {
+  from {
+    -webkit-transform: translateY(110vh);
+            transform: translateY(110vh);
+    font-size: 2rem;
+  }
+  to {
+    -webkit-transform: translateY(-10vh);
+            transform: translateY(-10vh);
+    font-size: .5rem;
+  }
+}
+
+@keyframes credits {
+  from {
+    -webkit-transform: translateY(110vh);
+            transform: translateY(110vh);
+    font-size: 2rem;
+  }
+  to {
+    -webkit-transform: translateY(-10vh);
+            transform: translateY(-10vh);
+    font-size: .5rem;
+  }
+}
+
+@-webkit-keyframes jumping {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+@keyframes jumping {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
 }
 /*# sourceMappingURL=estilos.css.map */

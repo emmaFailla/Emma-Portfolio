@@ -3,6 +3,8 @@
     src: url(fonts/PixelOperatorMono8-Bold.ttf);
 }
 
+
+
 *{
     padding: 0;
     margin: 0;
@@ -67,6 +69,7 @@ body{
             justify-content: center;
             align-items: center;
             position: relative;
+            cursor: pointer;
 
             .gameArrow{
               position: absolute;
@@ -143,6 +146,103 @@ body{
     }
     .chooseYourCharacter__containerOff{
       display: none;
+    }
+
+    //Creditos Screen
+    .creditosScreen__container{
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      background-color: #000;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      
+      h1{
+        position: absolute;
+        opacity: .3;
+        font-size: 2rem;
+        top: calc(50vh - 2rem);
+        z-index: 1;
+      }
+
+      span{
+        font-size: .8rem;
+        color: yellow;
+        position: absolute;
+        animation-name: credits;
+        animation-duration: 8s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        text-align: center;
+        white-space: nowrap;
+        z-index: 2;
+        
+      }
+
+      .creditosClosingButton{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        i{
+          font-size: 1.5rem;
+        }
+      }
+
+    }
+
+    .creditosScreen__containerOff{
+      display: none;
+    }
+    //Social Network Screen
+    .redesSocialesScreen{
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color:#000;
+      display:grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 8fr;
+      justify-items: center;
+
+      .redesSocialesClosingButton{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size:1.5rem;
+      }
+      
+
+      .redesSocialesTitle__container{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        height: 100%;
+        width: 90%;
+        border-bottom: solid #fff 4px;
+        text-align: center;
+      }
+
+      .redesSociales__container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items:center;
+        justify-content:space-evenly;
+
+
+        }
+      }
+
+      .redesSocialesScreenOff{
+        display: none;
+      }
     }
     
 
@@ -289,6 +389,7 @@ body{
                 align-items: center;
                 justify-content:center;
                 z-index: 2;
+                cursor: pointer;
 
                 i{
                   font-size:.6rem;
@@ -556,6 +657,8 @@ body{
                 height: 90%;
                 width: 90%;
                 object-fit:contain;
+                cursor: pointer;
+
               }
 
               .leftButton{
@@ -563,12 +666,15 @@ body{
                 left: -2rem;
                 font-size: 1.5rem;
                 z-index: 2;
+                cursor: pointer;
+
               }
               .rightButton{
                 position: absolute;
                 right: -2rem;
                 font-size: 1.5rem;
                 z-index: 2;
+                cursor: pointer;
 
 
               }
@@ -801,5 +907,32 @@ body{
 }
 
 
+  //StarWars Credits
+   
 
+  @keyframes credits {
+    from{
+      transform: translateY(110vh);
+      font-size: 2rem;
+    }
+  
+    to{
+      transform: translateY(-10vh);
+      font-size: .5rem;
+
+    }
+  }
+
+  //orbit
+  @keyframes jumping {
+    
+    from{
+      transform: translateY(0px) 
+    }
+
+    to{
+      transform: translateY(20px) 
+
+
+    }
   }

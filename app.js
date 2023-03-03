@@ -331,7 +331,7 @@ function handlingMenuButtons(e){
     }
 }
 
-//Clicking handling menu buttons
+//Clicking handling Menu Buttons
 gameOptions.forEach(option =>{
     option.addEventListener('click',(e)=>{
         if(e.currentTarget.classList.contains('newGameOption')){
@@ -346,12 +346,14 @@ gameOptions.forEach(option =>{
             gameArrowPosition = 1;
             infoSound.currentTime = 0;
             infoSound.play();
+            document.querySelector('.creditosScreen__container').classList.toggle('creditosScreen__containerOff')
             return showingGameArrow();
         }
         else if(e.currentTarget.classList.contains('optionsOption')){
             gameArrowPosition = 2;
             infoSound.currentTime = 0;
             infoSound.play();
+            document.querySelector('.redesSocialesScreen').classList.toggle('redesSocialesScreenOff');
             return showingGameArrow();
         }
         else{
@@ -426,7 +428,7 @@ mainCharacterClosingButton.addEventListener('click',()=>{
             console.log('removiendoBarritaGit');
            gitStats.removeChild(gitStats.lastChild)
            initialPoints +=1;
-           addedStat = ''
+           addedStat = '';
            pointsContainer.innerHTML = `Puntos disponibles : ${initialPoints}`
 
         }
@@ -434,4 +436,24 @@ mainCharacterClosingButton.addEventListener('click',()=>{
 //This works just using 1 point, is more of it are added the system wouldn´t work, it´s not dynamic (Something to work on in the future)
 
 
+//Closing credits
+document.querySelector('.creditosClosingButton').addEventListener('click',()=>{
+    closingSound.currentTime = 0;
+    closingSound.play()
+    document.querySelector('.creditosScreen__container').classList.toggle('creditosScreen__containerOff')
+})
+let errorSound = new Audio('audio/error.mp3')
+//Closing Social Networks
+let blockedCharacterList = document.querySelectorAll('.blockedCharacter');
+blockedCharacterList.forEach(character =>{
+    character.addEventListener('click',()=>{
+        errorSound.currentTime = 0;
+        errorSound.play();
+    });
+});
 
+document.querySelector('.redesSocialesClosingButton').addEventListener('click',()=>{
+    closingSound.currentTime = 0;
+    closingSound.play();
+    document.querySelector('.redesSocialesScreen').classList.toggle('redesSocialesScreenOff')
+})
